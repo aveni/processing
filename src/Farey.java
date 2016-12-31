@@ -3,8 +3,8 @@ import processing.core.PApplet;
 public class Farey extends PApplet
 {
 
-  int width=600;
-  int height=620;
+  int width=1600;
+  int height=900;
   int counter=0;
 
   public void setup()
@@ -18,9 +18,9 @@ public class Farey extends PApplet
   public void drawStats(int counter)
   {
     stroke(0);
-    fill(255); rect(0,600,600,20);
+    fill(255); rect(0,height-20,140,20);
     textSize(18); fill(0);
-    text("N-Value: " + counter, 15, 617);
+    text("N-Value: " + counter, 15, height-3);
   }
 
   public void draw()
@@ -62,7 +62,7 @@ public class Farey extends PApplet
   
   public void drawSet(int n, int width, int height)
   {
-    stroke((int)(.7*n));
+    stroke((int)(0.3*n));
     for (int x=0; x<=n; x++)
     {
       for (int y=0; y<=n; y++)
